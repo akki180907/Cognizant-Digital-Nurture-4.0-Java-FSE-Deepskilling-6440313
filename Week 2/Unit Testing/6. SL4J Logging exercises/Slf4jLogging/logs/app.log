@@ -1,0 +1,4 @@
+2025-06-26 13:28:53 DEBUG com.example.MultipleAppenderExample - Debug level log - useful for developers.
+2025-06-26 13:28:53 INFO  com.example.MultipleAppenderExample - Info level log - general information.
+2025-06-26 13:28:53 WARN  com.example.MultipleAppenderExample - Warning level log - something unexpected happened.
+2025-06-26 13:28:53 ERROR com.example.MultipleAppenderExample - Error level log - an error occurred.
