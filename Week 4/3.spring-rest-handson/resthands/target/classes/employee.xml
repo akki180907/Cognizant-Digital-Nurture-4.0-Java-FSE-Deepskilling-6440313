@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- ✅ Skills -->
+    <bean id="skillJava" class="com.example.resthands.model.Skill">
+        <property name="name" value="Java"/>
+    </bean>
+
+    <bean id="skillSpring" class="com.example.resthands.model.Skill">
+        <property name="name" value="Spring Boot"/>
+    </bean>
+
+    <!-- ✅ Departments -->
+    <bean id="devDept" class="com.example.resthands.model.Department">
+        <property name="name" value="Development"/>
+    </bean>
+
+    <bean id="hrDept" class="com.example.resthands.model.Department">
+        <property name="name" value="Human Resources"/>
+    </bean>
+
+    <!-- ✅ Department List -->
+    <bean id="departmentList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="devDept"/>
+                <ref bean="hrDept"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!-- ✅ Employees -->
+    <bean id="emp1" class="com.example.resthands.model.Employee">
+        <property name="id" value="1"/>
+        <property name="name" value="Akshaya"/>
+        <property name="department" ref="devDept"/>
+        <property name="skills">
+            <list>
+                <ref bean="skillJava"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="emp2" class="com.example.resthands.model.Employee">
+        <property name="id" value="2"/>
+        <property name="name" value="Priya"/>
+        <property name="department" ref="devDept"/>
+        <property name="skills">
+            <list>
+                <ref bean="skillSpring"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ✅ Employee List -->
+    <bean id="employeeList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="emp1"/>
+                <ref bean="emp2"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>
