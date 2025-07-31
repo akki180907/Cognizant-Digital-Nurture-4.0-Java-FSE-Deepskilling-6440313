@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30px;
+  text-align: left;
+}
+
+.column {
+  width: 30%;
+}
+
+.bordered {
+  border-left: 3px solid green;
+  padding-left: 20px;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+strong {
+  font-size: 18px;
+  display: block;
+  margin-top: 15px;
+}
